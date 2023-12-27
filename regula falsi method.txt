@@ -1,0 +1,21 @@
+def f(x):
+    return x**3-9*x+1
+
+
+a=int(input("first initial value:"))
+b=int(input("second initial value:"))
+n=int(inpur("number to iteration:"))
+
+if f(a)*f(b)>0:
+    print("method fails..")
+else:
+    k=1
+    while(k<=n):
+        c=(a*f(b)-b*f(a))/(f(b)-f(a))
+        if f(a)*f(c)<0:
+            b=c
+        else:
+            a=c
+            print("root=",c,"at iteration=",k)
+            k=k+1
+            
